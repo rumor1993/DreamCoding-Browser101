@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      window.addEventListener("resize", function () {
+        document.getElementById("screen").innerHTML = window.screen.width + ", " + window.screen.height;
+        document.getElementById("outer").textContent = window.outerWidth + ", " + window.outerHeight;
+        document.getElementById("inner").textContent = window.innerWidth + ", " + window.innerHeight;
+        clientWidth = document.getElementById("clientWidth").textContent =
+          document.documentElement.clientWidth + ", " + document.documentElement.clientHeight;
+      });
+    </script>
+  </head>
+  <body>
+    <div>widnow.screen :</div>
+    <span id="screen"> </span>
+    <div>widnow.outer :</div>
+    <span id="outer"></span>
+    <div>widnow.inner :</div>
+    <span id="inner"></span>
+    <div>documentElement.clientWidt :</div>
+    <span id="clientWidth"></span>
+  </body>
+</html>
