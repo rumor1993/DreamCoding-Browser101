@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        background-color: black;
+      }
+      .box {
+        background-color: blanchedalmond;
+        width: 100px;
+        height: 100px;
+        margin-top: 2px;
+      }
+
+      .checkbox {
+        background-color: darksalmon;
+      }
+    </style>
+  </head>
+
+  <body class="body">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div id="clickBox" class="box checkbox"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+  <script>
+    const checkboxObj = document.getElementById("clickBox");
+    checkboxObj.addEventListener("click", function (e) {
+      console.log(`Element.getBoundingClientRect() ${this.getBoundingClientRect()}`);
+      console.log(this.getBoundingClientRect());
+      console.log(`Page.X : ${e.pageX}`);
+      console.log(`Page.Y : ${e.pageY}`);
+      console.log(`clientX : ${e.clientX}`);
+      console.log(`clientY : ${e.clientY}`);
+    });
+  </script>
+</html>

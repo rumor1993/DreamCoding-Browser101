@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="03_test.js" defer></script>
+  </head>
+  <body>
+    <!-- 
+    배움에 대한 태도까지 배워가신다니 정말 좋네요 ♥️
+
+    window.onload와 window.addEventListener('load', ) 두가지 
+    방식 다 window의 load 이벤트가 발생한 시점에 원하는 코드를 
+    수행하기 위해서 사용한다는것은 똑같아요. 
+
+    하지만, window.onload는 window 오브젝트에 직접적으로 
+    onload 속성에 우리의 콜백함수를 지정해주는 것이라서, 나중에
+    다시 window.onload에 다른 콜백함수를 지정하게 되면 앞에서
+    등록한 콜백함수를 덮어 쓰기 때문에, 말씀 하신 것처럼 최종적으로
+    지정된 아이만 실행이 되어져요
+
+    반대로 addEventLisener API를 이용하시면 지정하는 것이 아니라,
+    콜백함수를 추가 하는 것이기 때문에 동일한 이벤트에서 다수의 콜백함수를 등록 할 수 있어요.
+
+    그래서 되도록이면 지정하는것보다 등록할 수 있는 add..를 이용하는것이 좋아요 :)
+
+    이유는, 다른 개발자가 다른 파일에서 window.onload를 썼다면 
+    내가 다른 파일에서 또 window.onload를 작성하게 되면 예상치 못한 🐛 버그가 발생하겠죠?
+-->
+
+    <script>
+      // only document
+      window.addEventListener("DOMContentLoaded", () => {
+        console.log("DOMContentLoaded");
+      });
+
+      // after resources (css, images)
+      window.addEventListener("load", () => {
+        console.log("load");
+      });
+
+      // before unload
+      window.addEventListener("beforeunload", () => {
+        console.log("beforeunload");
+      });
+
+      // resource is being unloaded
+      window.addEventListener("unload", () => {
+        console.log("unload");
+      });
+    </script>
+  </body>
+</html>
