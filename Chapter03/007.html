@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .pointer {
+        width: 100vh;
+        height: 100vh;
+      }
+
+      .pointer-line {
+        position: fixed;
+        background-color: white;
+        border-color: white;
+        width: 1px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pointer"></div>
+    <div class="pointer-line"></div>
+    <script>
+      const pointerLine = document.querySelector(".pointer-line");
+      document.querySelector(".pointer").addEventListener("mousemove", function (e) {
+        pointerLine.style.top = `${e.clientY}px`;
+        pointerLine.style.left = `${e.clientX}px`;
+        console.log(` clientX ### ${e.clientX} , ${e.clientY}`);
+      });
+    </script>
+  </body>
+</html>
