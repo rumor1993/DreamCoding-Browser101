@@ -1,0 +1,27 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 500px;
+  background: url("../carrot/img/background.png") center/cover;
+}
+
+.game-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-button {
+  width: 60px;
+  height: 60px;
+  background-color: wheat;
+  border: 4px solid black;
+}
+
+.game-field {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}

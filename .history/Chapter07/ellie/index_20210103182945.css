@@ -1,0 +1,11 @@
+.game {
+  width: 800px;
+  height: 500px;
+  background: url("../carrot/img/background.png") center/cover;
+}
+
+.game-header {
+}
+
+.game-field {
+}

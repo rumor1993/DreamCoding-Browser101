@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .selected {
+        background-color: yellow;
+      }
+
+      #test1 {
+        width: 100px;
+        height: 100px;
+        background-color: darkseagreen;
+      }
+
+      #test2 {
+        position: absolute;
+        left: 200px;
+        width: 50px;
+        height: 50px;
+        background-color: darkslateblue;
+      }
+
+      #test3 {
+        position: absolute;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        background-color: darkturquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+
+    <div id="test1">
+      <div id="test2"></div>
+      <div id="test3"></div>
+    </div>
+    <script>
+      // Bad
+      // const lis = document.querySelectorAll('li');
+      // lis.forEach(li => {
+      //   li.addEventListener('click', () => {
+      //     li.classList.add('selected');
+      //   });
+      // });
+
+      // Coooooooool 🙌
+      const ul = document.querySelector("ul");
+      ul.addEventListener("click", (event) => {
+        if (event.target.tagName == "LI") {
+          event.target.classList.add("selected");
+        }
+      });
+
+      const test1 = document.querySelector("#test1");
+      test1.addEventListener("click", () => {
+        console.log("### 1 ###");
+      });
+    </script>
+  </body>
+</html>

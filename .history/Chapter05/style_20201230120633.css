@@ -1,0 +1,35 @@
+<style>
+.shoopping-list {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: blanchedalmond;
+}
+.header {
+  position: relative;
+  width: 500px;
+  height: 50px;
+  background-color: darkseagreen;
+}
+
+.contents {
+  position: relative;
+  width: 500px;
+  height: 20px;
+}
+
+.contents input {
+  position: relative;
+  width: 500px;
+  height: 20px;
+}
+
+.footer {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  bottom: 0;
+  background-color: darkseagreen;
+}
+</style>
